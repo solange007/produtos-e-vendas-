@@ -15,9 +15,35 @@
         </div>
     </header>
 
-    <input type="text" id="search-bar" placeholder="Busque um produto..." oninput="searchProducts()">
-    </header>
 
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Barra de Busca</title>
+        <link rel="stylesheet" href="style.css"> <!-- Aqui você pode linkar seu arquivo de estilo CSS -->
+    </head>
+    <body>
+    
+        <header>
+            <h1>Bem-vindo ao Meu Site</h1>
+            <!-- Barra de busca -->
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Digite o que deseja buscar...">
+                <button onclick="search()">Pesquisar</button>
+            </div>
+        </header>
+    
+        <!-- Aqui será exibido o resultado da busca -->
+        <div class="results" id="results">
+            <!-- Os resultados aparecerão aqui -->
+        </div>
+    
+        <script src="script.js"></script> <!-- Aqui você pode linkar seu arquivo JavaScript -->
+    </body>
+    </html>
+    
     <!-- Conteúdo principal -->
     <main>
         <div class="container">
