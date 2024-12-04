@@ -59,7 +59,6 @@
     <body>
     
         <div class="search-container">
-            <h2>Pesquise no nosso site</h2>
             <form action="/resultado-de-pesquisa" method="GET">
                 <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
                 <button type="submit">Buscar</button>
@@ -230,6 +229,98 @@
     <footer>
         <p>&copy; Todos os direitos reservados.</p>
     </footer>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Compra</title>
+    <style>
+        /* Estilo básico para a barra de compra */
+        .cart-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .cart-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ff8c00;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart-button:hover {
+            background-color: #e07b00;
+        }
+
+        .cart-info {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .item {
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cart-container">
+        <h2>Adicione ao seu Carrinho</h2>
+        
+        <!-- Exemplos de produtos -->
+        <div class="item">
+            <p>Produto 1: Camiseta</p>
+            <button class="cart-button" onclick="adicionarAoCarrinho('Camiseta')">Adicionar ao Carrinho</button>
+        </div>
+        <div class="item">
+            <p>Produto 2: Calça</p>
+            <button class="cart-button" onclick="adicionarAoCarrinho('Calça')">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="cart-info" id="cart-info">
+            <p>Seu Carrinho está vazio.</p>
+        </div>
+
+        <!-- Botão para finalizar a compra -->
+        <a href="https://www.exemplo.com/checkout" id="checkout-button">
+            <button class="cart-button">Finalizar Compra</button>
+        </a>
+    </div>
+
+    <script>
+        let carrinho = [];
+
+        function adicionarAoCarrinho(item) {
+            // Adiciona o item ao carrinho
+            carrinho.push(item);
+            atualizarCarrinho();
+        }
+
+        function atualizarCarrinho() {
+            const cartInfo = document.getElementById("cart-info");
+
+            if (carrinho.length > 0) {
+                cartInfo.innerHTML = `<p>Itens no Carrinho: ${carrinho.join(", ")}</p>`;
+            } else {
+                cartInfo.innerHTML = "<p>Seu Carrinho está vazio.</p>";
+            }
+        }
+    </script>
 
 </body>
 </html>
