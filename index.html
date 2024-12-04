@@ -20,37 +20,20 @@
     </header>
 
 
-    
 
-    <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Busca de Produtos</title>
-            <link rel="stylesheet" href="style.css">
-        </head>
-        <body>
-        
-            <!-- Barra de busca -->
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Buscar produtos..." onkeyup="searchProducts()">
-            </div>
-        
-            <!-- Lista de produtos -->
-            <div class="product-list">
-                <div class="product-item">Produto 1 - R$99.99</div>
-                <div class="product-item">Produto 2 - R$150,00</div>
-                <div class="product-item">Produto 3 - R$30,00</div>
-                <div class="product-item">Produto 4 - R$80,00</div>
-                <div class="product-item">Produto 5 - R$120,00</div>
-                <div class="product-item">Produto 6 - R$200,00</div>
-            </div>
-            <script src="script.js"></script>
-        </body>
-        </html>
-        
-          
+
+    <body>
+        <div id="search-container">
+            <input type="text" id="search-bar" placeholder="Buscar produtos..." onkeyup="searchProducts()">
+        </div>
+    
+        <ul id="product-list">
+            <!-- Os produtos serão inseridos aqui dinamicamente -->
+        </ul>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
    
 
 
@@ -355,3 +338,6 @@ function finalizarCompra() {
 </html>
 
 
+<script src="javascript"></script>
+</body>
+</html>
