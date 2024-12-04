@@ -20,35 +20,56 @@
     </header>
 
 
-
-
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Barra de Busca</title>
-        <link rel="stylesheet" href="style.css"> <!-- Aqui você pode linkar seu arquivo de estilo CSS -->
+        <title>Barra de Pesquisa</title>
+        <style>
+            /* Estilizando a barra de pesquisa */
+            .search-container {
+                text-align: center;
+                margin-top: 50px;
+            }
+    
+            input[type="text"] {
+                padding: 10px;
+                width: 300px;
+                font-size: 16px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+    
+            button {
+                padding: 10px;
+                font-size: 16px;
+                border-radius: 5px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+    
+            button:hover {
+                background-color: #45a049;
+            }
+        </style>
     </head>
     <body>
     
-        <header>
-            
-            <div class="search-container">
-                <input type="text" id="search-bar" placeholder="Digite o que deseja buscar...">
-                <button onclick="search()">Pesquisar</button>
-            </div>
-        </header>
-    
-        
-        <div class="results" id="results">
-
+        <div class="search-container">
+            <h2>Pesquise no nosso site</h2>
+            <form action="/resultado-de-pesquisa" method="GET">
+                <input type="text" name="query" placeholder="Digite sua pesquisa..." required>
+                <button type="submit">Buscar</button>
+            </form>
         </div>
     
-        <script src="script.js"></script> 
     </body>
     </html>
 
+   
 
 
 
