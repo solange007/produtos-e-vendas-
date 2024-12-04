@@ -101,12 +101,23 @@
 
                 
                 <div class="produto">
-                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTC4N5PVdbQJ0AuQ8pZzizprMOqwksrlpinfaEnuBpwVfnQAK67uRqyRMCbxglL60lvV17C06kbbCOAJL8JeMYau0vSFB0zfu83O4tQBzBSRU_WPa6DdsabBg&usqp=CAE alt="
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQDCQNk02y1JgP4KLOcHoytrwz_CgdFjrUPdJiK9u26y0al1Fy_Qr497vTb96dIe1Ajeug6LDg3SsuiMvj0ayDPV0bciFf8EaBbfYRxXMoVdwCcrXUSgdhBNQ&usqp=CAE"
                     <h3> Iphone 16 </h3>
                     <p> Apple iPhone 16 Plus 128GB 6.7 Rosa</p>
                     <p class="preco">R$ 7.899,90 </p>
                     <p>Frete gratis nas compras acima de R$ 10,00</p>
-                    <button>Comprar</button>
+                    <button class="buy-button" onclick="redirectToPurchasePage()">Comprar</button>
+
+                    <script>
+                        function redirectToPurchasePage() {
+                            var purchasePageURL = "https://www.casasbahia.com.br/apple-iphone-16-128gb-rosa-1569888923/p/1569888923?utm_medium=Cpc&utm_source=GP_PLA&IdSku=1569888923&idLojista=35821&tipoLojista=3P&gclsrc=aw.ds&&utm_campaign=3p_gg_pmax_core_tele_b&gad_source=4&gclid=CjwKCAiA9bq6BhAKEiwAH6bqoIJdjT-B7kaMi0NVrITQMIhBMd0vqcIp0P4NyGmWYMP9PF2QXy94GxoCBpIQAvD_BwE "; 
+                            window.location.href = purchasePageURL;
+                        }
+                    </script>
+                </body>
+                </html>
+
+
                 </p>
                     <button onclick="adicionarAoCarrinho('Apple iPhone 16 Plus 128GB 6.7 Rosa-R$ 7.899,90')">Adicionar ao Carrinho</button>
     
