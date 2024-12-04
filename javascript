@@ -1,5 +1,6 @@
 
 
+
 // Exemplo de lista de produtos em um arquivo JSON ou como um array de objetos
 const products = [
     { id: 1, name: "Produto 1", description: "Descrição do Produto 1" },
@@ -36,4 +37,3 @@ function searchProducts() {
 window.onload = () => {
     displayProducts(products);
 };
-
