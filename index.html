@@ -240,18 +240,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barra de Compra</title>
+    <title>Minha Loja Online</title>
     <style>
-        /* Estilo básico para a barra de compra */
-        .cart-container {
+        /* Estilo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
             text-align: center;
+        }
+
+        .cart-container {
+            display: flex;
+            justify-content: center;
             margin-top: 50px;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product {
+            background-color: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product button {
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #218838;
+        }
+
+        .cart-summary {
+            margin-top: 30px;
+            text-align: center;
         }
 
         .cart-button {
-            padding: 15px 30px;
-            font-size: 18px;
-            background-color: #ff8c00;
+            padding: 10px 20px;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
@@ -259,68 +301,147 @@
         }
 
         .cart-button:hover {
-            background-color: #e07b00;
-        }
-
-        .cart-info {
-            font-size: 16px;
-            margin-top: 20px;
-        }
-
-        .item {
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin: 5px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            background-color: #0056b3;
         }
 
     </style>
 </head>
 <body>
 
-    <div class="cart-container">
-        <h2>Adicione ao seu Carrinho</h2>
-        
-        <!-- Exemplos de produtos -->
-        <div class="item">
-            <p>Produto 1: Camiseta</p>
-            <button class="cart-button" onclick="adicionarAoCarrinho('Camiseta')">Adicionar ao Carrinho</button>
-        </div>
-        <div class="item">
-            <p>Produto 2: Calça</p>
-            <button class="cart-button" onclick="adicionarAoCarrinho('Calça')">Adicionar ao Carrinho</button>
-        </div>
-        
-        <div class="cart-info" id="cart-info">
-            <p>Seu Carrinho está vazio.</p>
-        </div>
 
-        <!-- Botão para finalizar a compra -->
-        <a href="https://www.exemplo.com/checkout" id="checkout-button">
-            <button class="cart-button">Finalizar Compra</button>
-        </a>
-    </div>
-
-    <script>
-        let carrinho = [];
-
-        function adicionarAoCarrinho(item) {
-            // Adiciona o item ao carrinho
-            carrinho.push(item);
-            atualizarCarrinho();
-        }
-
-        function atualizarCarrinho() {
-            const cartInfo = document.getElementById("cart-info");
-
-            if (carrinho.length > 0) {
-                cartInfo.innerHTML = `<p>Itens no Carrinho: ${carrinho.join(", ")}</p>`;
-            } else {
-                cartInfo.innerHTML = "<p>Seu Carrinho está vazio.</p>";
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minha Loja Online</title>
+        <style>
+            /* Estilo da página */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
             }
-        }
-    </script>
-
-</body>
-</html>
+    
+            .header {
+                background-color: #333;
+                color: white;
+                padding: 10px 0;
+                text-align: center;
+            }
+    
+            .cart-container {
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .product {
+                background-color: white;
+                border-radius: 5px;
+                padding: 20px;
+                margin: 10px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .product button {
+                padding: 10px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            .product button:hover {
+                background-color: #218838;
+            }
+    
+            .cart-summary {
+                margin-top: 30px;
+                text-align: center;
+            }
+    
+            .cart-button {
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+    
+            .cart-button:hover {
+                background-color: #0056b3;
+            }
+    
+        </style>
+    </head>
+    <body>
+    
+        <div class="header">
+            <h1>Loja Online</h1>
+        </div>
+    
+        <div class="cart-container">
+            <div class="product">
+                <h2>Produto 1 - Camiseta</h2>
+                <p>Preço: R$ 39,99</p>
+                <button onclick="adicionarAoCarrinho('Camiseta - R$ 39,99')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <h2>Produto 2 - Calça</h2>
+                <p>Preço: R$ 89,99</p>
+                <button onclick="adicionarAoCarrinho('Calça - R$ 89,99')">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <h2>Produto 3 - Jaqueta</h2>
+                <p>Preço: R$ 159,99</p>
+                <button onclick="adicionarAoCarrinho('Jaqueta - R$ 159,99')">Adicionar ao Carrinho</button>
+            </div>
+    
+            <!-- Resumo do carrinho -->
+            <div class="cart-summary" id="cart-summary">
+                <p>Carrinho: Vazio</p>
+                <button class="cart-button" onclick="finalizarCompra()">Finalizar Compra</button>
+            </div>
+        </div>
+    
+        <script>
+            let carrinho = [];
+    
+            function adicionarAoCarrinho(item) {
+                // Adiciona o item ao carrinho
+                carrinho.push(item);
+                atualizarResumoCarrinho();
+            }
+    
+            function atualizarResumoCarrinho() {
+                // Exibe os itens no carrinho
+                const cartSummary = document.getElementById('cart-summary');
+                if (carrinho.length > 0) {
+                    cartSummary.innerHTML = `
+                        <p>Itens no Carrinho: ${carrinho.join(', ')}</p>
+                        <button class="cart-button" onclick="finalizarCompra()">Finalizar Compra</button>
+                    `;
+                } else {
+                    cartSummary.innerHTML = `
+                        <p>Carrinho: Vazio</p>
+                        <button class="cart-button" onclick="finalizarCompra()">Finalizar Compra</button>
+                    `;
+                }
+            }
+    
+            function finalizarCompra() {
+                // Redireciona para o site de compras (você pode substituir pela URL do seu checkout)
+                const urlCheckout = "https://www.seusite.com/checkout";
+                window.location.href = urlCheckout;
+            }
+        </script>
+    
+    </body>
+    </html>
+    
