@@ -328,6 +328,52 @@ function finalizarCompra() {
 
 
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão de Compra</title>
+    <style>
+        /* Estilo do botão de compra */
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão de compra -->
+    <button class="buy-button" onclick="redirectToPurchasePage()">Comprar Agora</button>
+
+    <script>
+        // Função para redirecionar para a página de compra
+        function redirectToPurchasePage() {
+            // Defina a URL da página de compra
+            var purchasePageURL = "https://m.shein.com/br/SHEIN-Belle-Tie-Backless-Split-Thigh-Dress-p-10472067.html"; // Substitua pela URL da sua página de compra
+
+            // Redirecionar para a página de compra
+            window.location.href = purchasePageURL;
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
 
 
 <footer>
