@@ -88,39 +88,3 @@ footer {
 
 
 
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-#searchBar {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#productList {
-    list-style-type: none;
-    padding: 0;
-}
-
-#productList li {
-    padding: 10px;
-    margin: 5px 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    text-align: left;
-}
