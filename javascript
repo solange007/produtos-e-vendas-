@@ -1,10 +1,8 @@
 
 
 
-// script.js
 function searchProducts() {
-    const input = document.getElementById('searchInput');
-    const filter = input.value.toLowerCase();
+    const input = document.getElementById('searchInput').value.toLowerCaer();
     const productItems = document.querySelectorAll('.product-item');
     
     productItems.forEach((item) => {
