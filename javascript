@@ -1,17 +1,17 @@
 
-// Função para pesquisar produtos
+// Função que será chamada quando o usuário digitar algo na barra de pesquisa
 function searchProducts() {
-    let input = document.getElementById('searchInput').value.toLowerCase();
-    let products = document.querySelectorAll('.product');
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const products = document.querySelectorAll('.product');
 
-    products.forEach(function(product) {
-        let productName = product.getAttribute('data-name').toLowerCase();
+    products.forEach(product => {
+        const productName = product.getAttribute('data-name').toLowerCase();
         
         // Verifica se o nome do produto contém o texto da pesquisa
         if (productName.includes(input)) {
-            product.style.display = 'block'; // Exibe o produto
+            product.classList.add('visible');  // Exibe o produto
         } else {
-            product.style.display = 'none'; // Oculta o produto
+            product.classList.remove('visible');  // Oculta o produto
         }
     });
 }

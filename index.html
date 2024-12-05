@@ -34,29 +34,56 @@
 
     <h1>Pesquisa de Produtos</h1>
     
-    <!-- Barra de pesquisa -->
-    <input type="text" id="searchInput" placeholder="Pesquise um produto..." onkeyup="searchProducts()">
+    
+    
 
-    <div id="productList">
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Produtos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Pesquisa de Produtos</h1>
+
+        <!-- Barra de pesquisa -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Digite o nome do produto..." onkeyup="searchProducts()">
+        </div>
+
         <!-- Lista de produtos -->
-        <div class="product" data-name="Produto 1">
-            <h2>Produto 1</h2>
-            <p>Descrição do Produto 1.</p>
+        <div id="productList">
+            <div class="product" data-name="Camiseta Estampada">
+                <img src="https://via.placeholder.com/150" alt="Camiseta Estampada">
+                <h2>Camiseta Estampada</h2>
+                <p>Descrição da camiseta estampada.</p>
+            </div>
+            <div class="product" data-name="Calça Jeans">
+                <img src="https://via.placeholder.com/150" alt="Calça Jeans">
+                <h2>Calça Jeans</h2>
+                <p>Descrição da calça jeans.</p>
+            </div>
+            <div class="product" data-name="Tênis Esportivo">
+                <img src="https://via.placeholder.com/150" alt="Tênis Esportivo">
+                <h2>Tênis Esportivo</h2>
+                <p>Descrição do tênis esportivo.</p>
+            </div>
+            <div class="product" data-name="Jaqueta de Couro">
+                <img src="https://via.placeholder.com/150" alt="Jaqueta de Couro">
+                <h2>Jaqueta de Couro</h2>
+                <p>Descrição da jaqueta de couro.</p>
+            </div>
         </div>
-        <div class="product" data-name="Produto 2">
-            <h2>Produto 2</h2>
-            <p>Descrição do Produto 2.</p>
-        </div>
-        <div class="product" data-name="Produto 3">
-            <h2>Produto 3</h2>
-            <p>Descrição do Produto 3.</p>
-        </div>
-        <!-- Adicione mais produtos conforme necessário -->
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
 
     
 
