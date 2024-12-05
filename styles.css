@@ -90,4 +90,47 @@ footer {
 
 
 
+/* Estilo básico para a barra de pesquisa e lista de produtos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+#productList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.product {
+    background-color: white;
+    padding: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.product p {
+    color: #555;
+}
 
